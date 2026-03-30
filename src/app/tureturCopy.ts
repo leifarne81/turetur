@@ -4,6 +4,8 @@ export type TureturCopy = {
   brand: {
     name: string;
     mark: string;
+    tag: string;
+    dot: string;
   };
   header: {
     navFind: string;
@@ -32,6 +34,8 @@ export const TURETUR_COPY: Record<TureturLang, TureturCopy> = {
     brand: {
       name: "Turetur",
       mark: "T",
+      tag: "Reisebørs",
+      dot: ".",
     },
     header: {
       navFind: "Finn reise",
@@ -71,6 +75,8 @@ export const TURETUR_COPY: Record<TureturLang, TureturCopy> = {
     brand: {
       name: "Turetur",
       mark: "T",
+      tag: "Resebörs",
+      dot: ".",
     },
     header: {
       navFind: "Hitta resa",
@@ -110,6 +116,8 @@ export const TURETUR_COPY: Record<TureturLang, TureturCopy> = {
     brand: {
       name: "Turetur",
       mark: "T",
+      tag: "Rejsebørs",
+      dot: ".",
     },
     header: {
       navFind: "Find en rejse",

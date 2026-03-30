@@ -13,13 +13,36 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-[#F7F3EA] via-white to-[#F7F3EA] font-sans">
       <header className="sticky top-0 z-10 border-b border-blue-100/70 bg-[#F7F3EA]/70 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-4 sm:px-6">
-          <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-sm">
-              {t.brand.mark}
+          <div
+            className="flex items-center gap-3 group cursor-pointer select-none"
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 shadow-lg shadow-blue-200 transition-transform group-hover:scale-105">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-6 w-6 text-white"
+                aria-hidden="true"
+              >
+                <path d="M7 7h10" />
+                <path d="M12 7v11" />
+                <path d="M12 18H9a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3" />
+                <path d="m15 10 2-3-2-3" />
+              </svg>
             </div>
-            <span className="text-lg font-semibold tracking-tight text-[#0B3A6D]">
-              {t.brand.name}
-            </span>
+            <div className="flex flex-col">
+              <span className="text-xl font-black tracking-tight text-[#0B3A6D] leading-none">
+                {t.brand.name}
+                <span className="text-blue-600">{t.brand.dot}</span>
+              </span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-400/80 leading-none mt-1">
+                {t.brand.tag}
+              </span>
+            </div>
           </div>
 
           <nav className="hidden items-center gap-6 md:flex" aria-label="Primary">
